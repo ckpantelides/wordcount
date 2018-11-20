@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Source : <%= url %></p>
+    
+    <% for(var val of countedWords) { %>
+      <ul style="list-style-type:none;">
+        <li><%- val[0] %> : <%- val[1] %></li>
+      </ul>
+    <% } %>
+  </body>
+</html>
