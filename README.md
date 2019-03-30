@@ -1,16 +1,21 @@
 Wordcount
 =================
 
-#### Challenge - create a program to count words
+#### Challenge - create a program to count the occurences of each word in an ebook
 
-* The challenge was to build a grid of equilateral triangles positioned as the picture below shows
-* When each triangle is clicked, it cycles between three colours
+* Built with node modules and Express
+* There's a scraper module, which uses [Cheerio](https://www.npmjs.com/package/cheerio) to parse the e-book's web address, and saves the e-book as a string
+* The string is split at each "space". Newlines/punctuation marks are escaped, and the result's saved in an array
+* The count module loops through each array element, checking it isn't a number. It then pushes words to an object. The hasOwnProperty method is used to check if it's the first occurence of that word, and the value pair of the word is increased accordingly
+* There are some tests of the code with mocha chai
 
-> First the grid of triangles is drawn. Each triangle is an object from the triangle class, with the x & y coordinates of each corner a property of the triangle object. The triangle objects are then pushed to an array
+> npm install
 
-> When the mouse is clicked, the distance between the x & y coordinates of the cursor is checked against the coordinates of each triangles' corners
+> node app.js
 
-> If the cursor is within distance "a" (the triangle's height) of each corner, it's inside the triangle, and the colour will change
+> go to localhost:3000
+
+> mocha test
 
 ![img1]
 
