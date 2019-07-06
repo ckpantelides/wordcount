@@ -12,6 +12,8 @@ Wordcount
 
 There are some tests of the code with mocha chai
 
+#### Installation
+
 > npm install // install the dependencies
 
 > node app.js // run the code
